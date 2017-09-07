@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link href="css/demo.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="logoGame i0" id="logoGame"></div>
+        <script type="text/javascript">
+        (function(){
+            var num = 0;
+            var time = [3000,120,120,120,120,120,120,120,120,120,120,120,120,130,130,150,130,130,130,150,130,150,300,100,100,100,100,1000,100,100,100,200,200,500];
+            var gif =function(){
+                setTimeout(function() {
+                    num++;
+                    if(num>34){
+                        num=1;
+                    }
+                    var $logo = document.getElementById('logoGame');
+                        $logo.className='logoGame i'+num;
+                        gif();
+                }, time[num-1]);
+            }
+            gif();
+        })()
+        </script>
+    </body> 
+</html>
